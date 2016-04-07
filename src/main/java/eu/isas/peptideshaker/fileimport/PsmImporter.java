@@ -291,7 +291,7 @@ public class PsmImporter {
             }
         }
         pool.shutdown();
-        if (!pool.awaitTermination(1, TimeUnit.DAYS)) {
+        if (!pool.awaitTermination(3, TimeUnit.DAYS)) {
             throw new InterruptedException("PSM import timed out. Please contact the developers.");
         }
     }
